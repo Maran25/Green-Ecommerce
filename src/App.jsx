@@ -23,7 +23,7 @@ function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/callback/failure" element={<EmptyCart message="Payment Unsuccessfull 😕"/>} />
-        <Route path="/callback/success" element={<SuccessPayment />} /> 
+        <Route path="/callbackurl/success" element={<SuccessPayment />} /> 
         <Route path="/cart" element={<CartTesting />} />
       </Route>
 
