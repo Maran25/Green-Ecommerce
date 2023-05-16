@@ -76,7 +76,7 @@ const NavbarTesting = () => {
           <p className="flex items-center h-5 w-5 justify-center">{quantity}</p>
           </span>)}
           <TbShoppingCartPlus className="text-slate-600 h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
-          <NavLink to="/cart">Cart</NavLink>
+          <p onClick={() => navigate("/cart")} className="cursor-pointer hover:text-black duration-150">Cart</p>
         </div>
       </div>
     </div>
