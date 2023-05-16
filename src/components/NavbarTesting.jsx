@@ -25,7 +25,7 @@ const NavbarTesting = () => {
           <button onClick={() => {navigate("/"); setDropdown(false)}} className="dropdown">Home</button>
           <button onClick={() => {navigate("/wishlist"); setDropdown(false)}} className="dropdown">Favourite</button>
           <button onClick={() => {navigate("/orders"); setDropdown(false)}} className="dropdown">My Orders</button>
-          <button onClick={() => {dispatch(clearUser()); dispatchCart(resetCart()); }} className="dropdown"> Logout </button>
+          <button onClick={() => {dispatch(clearUser()); dispatchCart(resetCart()); setDropdown(false)}} className="dropdown"> Logout </button>
         </>
     : 
         <>
@@ -37,10 +37,6 @@ const NavbarTesting = () => {
     e.preventDefault();
     navigate(`/search/${search}`)
     setSearch("");
-  }
-
-  if(user) {
-
   }
 
   return (
@@ -76,7 +72,7 @@ const NavbarTesting = () => {
           <p className="flex items-center h-5 w-5 justify-center">{quantity}</p>
           </span>)}
           <TbShoppingCartPlus className="text-slate-600 h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7" />
-          <NavLink to="/cart">Cart</NavLink>
+          <p onClick={() => navigate("/cart")} className="cursor-pointer hover:text-black duration-150">Cart</p>
         </div>
       </div>
     </div>
